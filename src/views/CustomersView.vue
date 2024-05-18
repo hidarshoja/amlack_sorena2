@@ -84,7 +84,7 @@
                 <div class="flex items-center">
                   <div class="m-1">
                     <img
-                      src="/number.svg"
+                      src="/img/number.svg"
                       alt="number"
                       class="w-4 h-4 bg-white rounded-md"
                     />
