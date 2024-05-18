@@ -243,6 +243,7 @@
   </div>
 </template>
 <script>
+
 import FileHome from "@/components/FileHomeComponent.vue";
 import Carousel from "@/components/CarouselComponent.vue";
 

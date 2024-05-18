@@ -1,1 +1,0 @@
-import{t as o,j as t,l as r,f as n,A as c}from"./index-HZYHl-kQ.js";const s={};function a(_,l){const e=c("router-view");return n(),t("div",null,[r(e)])}const u=o(s,[["render",a]]);export{u as default};

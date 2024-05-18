@@ -32,7 +32,7 @@
           @click="openModal = true"
           class="bg-green-300 text-sm py-1.5 px-4 rounded-lg border-green-700 border-1 border cursor-pointer text-gray-800 flex gap-2 items-center"
         >
-          <span><img src="/filter.svg" class="w-4" alt="" /></span
+          <span><img src="/img/filter.svg" class="w-4" alt="" /></span
           ><span>فیلترها</span>
         </span>
       </div>
@@ -50,7 +50,7 @@
         :key="item"
         class="mt-10"
       >
-        <a href="/detalis">
+        <a href="/detailsFiles">
           <div
             class="shadow-lg rounded-xl bg-white font-yekan overflow-hidden border-t border-t-[#eaeaea]"
           >
@@ -452,7 +452,7 @@ export default {
           time: "5",
           price: "100",
           price2: "1",
-          src: "/07.jpg",
+          src: "/img/07.jpg",
         },
         {
           id: 2,
@@ -465,7 +465,7 @@ export default {
           time: "7",
           price: "170",
           price2: "2,300",
-          src: "/08.jpg",
+          src: "/img/08.jpg",
         },
         {
           id: 3,
@@ -478,7 +478,7 @@ export default {
           time: "11",
           price: "1",
           price2: "200",
-          src: "/09.jpg",
+          src: "/img/09.jpg",
         },
         {
           id: 4,
@@ -491,7 +491,7 @@ export default {
           time: "5",
           price: "100",
           price2: "1",
-          src: "/10.jpg",
+          src: "/img/10.jpg",
         },
         {
           id: 6,
@@ -504,7 +504,7 @@ export default {
           time: "11",
           price: "1",
           price2: "200",
-          src: "/11.jpg",
+          src: "/img/11.jpg",
         },
         {
           id: 5,
@@ -517,7 +517,7 @@ export default {
           time: "7",
           price: "170",
           price2: "2,300",
-          src: "/12.jpg",
+          src: "/img/12.jpg",
         },
       ],
     };
