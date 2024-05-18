@@ -15,7 +15,7 @@
         placeholder="جستجو براساس نام  ، نام محدوده "
       />
       <img
-        src="/img/icons/search.svg"
+        src="/icons/search.svg"
         class="w-6 absolute left-2 cursor-pointer top-2"
         alt=""
       />
