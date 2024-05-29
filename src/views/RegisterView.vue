@@ -156,9 +156,9 @@
                   </div>
                   <div>
                     <span>حساب کاربری دارید ؟ </span>
-                    <a href="/auth/login" className="text-green-500">
+                    <router-link to="/auth/login" className="text-green-500">
                       ورود
-                    </a>
+                    </router-link>
                   </div>
                 </form>
               </div>

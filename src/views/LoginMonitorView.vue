@@ -65,20 +65,20 @@
         </div>
 
         <div>
-          <a href="/expertMonitor/PropertyRegistration">
+          <router-link to="/expertMonitor/PropertyRegistration">
             <button
               type="button"
               class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               ورود
             </button>
-          </a>
+          </router-link>
         </div>
       </form>
       <span class="py-2 text-xs block">
         <span class="text-red-500"> هنوز ثبت نام نکرده اید ؟ </span>
         <span class="text-green-500">
-          <a href="/expert/registerMonitor"> ثبت نام </a>
+          <router-link to="/expert/registerMonitor"> ثبت نام </router-link>
         </span>
       </span>
     </div>

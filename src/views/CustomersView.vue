@@ -47,7 +47,7 @@
         :key="item"
         class="mt-10"
       >
-        <a href="#">
+        <router-link to="#">
           <div
             class="shadow-lg rounded-xl bg-white font-yekan overflow-hidden border-t border-t-[#eaeaea]"
           >
@@ -145,7 +145,7 @@
               </div>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
       <div
         v-else-if="products.length == 0"

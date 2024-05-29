@@ -51,9 +51,9 @@
           هنوز ثبت نام نکرده اید ؟
         </span>
         <span class="text-green-500">
-          <a href="/auth/register">
+          <router-link to="/auth/register">
             ثبت نام
-          </a>
+          </router-link>
         </span>
       </span>
     </div>

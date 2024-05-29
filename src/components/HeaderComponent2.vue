@@ -18,13 +18,13 @@
               class="absolute bg-red-400 text-[12px] text-white w-5 h-5 rounded-full flex items-center justify-center top-[-5px] left-6"
               >3</span
             >
-            <a href="/advisor/notification">
+            <router-link to="/advisor/notification">
               <img
                 src="/icons/alert.png"
                 class="w-[30px] cursor-pointer"
                 alt=""
               />
-            </a>
+            </router-link>
           </div>
          
           <div class="relative">

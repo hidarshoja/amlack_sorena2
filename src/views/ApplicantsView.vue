@@ -42,7 +42,7 @@
         :key="item"
         class="mt-10"
       >
-        <a href="#">
+        <router-link to="#">
           <div
             class="shadow-lg rounded-xl bg-white font-yekan overflow-hidden border-t border-t-[#eaeaea]"
           >
@@ -140,7 +140,7 @@
               </div>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
       <div
         v-else-if="products.length == 0"
@@ -154,53 +154,53 @@
         class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 mt-10"
       >
         <div class="-mt-px flex w-0 flex-1">
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
           >
             قبلی
-          </a>
+          </router-link>
         </div>
         <div class="hidden md:-mt-px md:flex">
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >1</a
+            >1</router-link
           >
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-indigo-500 px-4 pt-4 text-sm font-medium text-indigo-600"
             aria-current="page"
-            >2</a
+            >2</router-link
           >
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >3</a
+            >3</router-link
           >
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >4</a
+            >4</router-link
           >
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >5</a
+            >5</router-link
           >
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >6</a
+            >6</router-link
           >
         </div>
         <div class="-mt-px flex w-0 flex-1 justify-end">
-          <a
+          <router-link
             href="#"
             class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
           >
             بعدی
-          </a>
+          </router-link>
         </div>
       </nav>
       <div

@@ -143,9 +143,9 @@
               </div>
               <div>
                 <span>حساب کاربری دارید ؟ </span>
-                <a href="/loginExpert" className="text-green-500">
+                <router-link to="/loginExpert" className="text-green-500">
                   ورود
-                </a>
+                </router-link>
               </div>
             </form>
           </div>

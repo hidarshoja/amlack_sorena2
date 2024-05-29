@@ -65,7 +65,7 @@
         </div>
 
         <div>
-         <a href="/expertPage/subscription">
+         <router-link to="/expertPage/subscription">
           
        
             <button
@@ -75,7 +75,7 @@
               
             ورود
             </button>
-          </a>
+          </router-link>
         </div>
       </form>
       <span class="py-2 text-xs block">
@@ -83,9 +83,9 @@
           هنوز ثبت نام نکرده اید ؟
         </span>
         <span class="text-green-500">
-          <a href="/registerExpert">
+          <router-link to="/registerExpert">
             ثبت نام
-          </a>
+          </router-link>
         </span>
       </span>
     </div>
