@@ -33,7 +33,7 @@
         <div class="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-start px-3 mt-4 cursor-pointer">
           <span class="text-base text-green-700">بسته های من</span>
         </div>
-        <div class="px-3">
+        <div class="px-3 overflow-x-auto">
           <table class="min-w-full">
             <thead class="bg-green-950">
               <tr>
