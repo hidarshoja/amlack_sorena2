@@ -3,76 +3,13 @@
     <div
       class="w-[90%]  min-h-[1000px] mx-auto bg-gray-300 shadow-lg py-10 px-3 lg:px-28 rounded-xl"
     >
-      <!-- <div class="w-full flex items-center justify-between py-3">
-        <div class="flex items-center gap-4">
-          <div>
-            <img src="/sorena.png" class="w-[30px]" alt="" />
-          </div>
-          <div>
-            <span class="text-green-950 text-xl font-semibold"
-              >املاک سورنا</span
-            >
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <div
-            class="w-10 h-10 p-2 border border-1 border-gray-400 bg-white rounded-full relative"
-          >
-            <span
-              class="absolute bg-red-400 text-[12px] text-white w-5 h-5 rounded-full flex items-center justify-center top-[-5px] left-6"
-              >3</span
-            >
-            <a href="/notification">
-              <img
-                src="/icons/alert.png"
-                class="w-[30px] cursor-pointer"
-                alt=""
-              />
-            </a>
-          </div>
-         
-          <div class="relative">
-            <div
-              class="w-10 h-10 p-2 border border-1 border-gray-400 bg-white rounded-full"
-              @click="toggleSubMenu"
-            >
-              <img
-                src="/icons/user.png"
-                class="w-[30px] cursor-pointer"
-                alt=""
-              />
-            </div>
-            <div
-              v-if="isSubMenuOpen"
-              class="absolute top-[42px] left-1 w-[150px] bg-white border border-gray-300 rounded-lg shadow-md z-30 text-sm"
-            >
-              <ul>
-                <li>
-                  <a href="/profile" class="profileBtn">حساب کاربری</a>
-                </li>
-                <li>
-                  <a class="profileBtn" href="/password">تغییر رمز عبور</a>
-                </li>
-                <li>
-                  <a class="profileBtn" href="/transactionsView">سوابق پرداختی</a>
-                </li>
-                <li>
-                  <a class="profileBtn" href="/BuySubscriptionView">خرید اشتراک</a>
-                </li>
-                <li>
-                  <a class="profileBtn">خروج</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
+    
       <div
        
         class="w-full mt-8 h-24 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg border-r-[5px] border-green-950 flex items-center justify-between px-3  hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-700"
       >
         <div class="flex gap-3 items-center">
-          <a href="/AccountView" class="flex gap-3">
+          <a href="/advisor/AccountView" class="flex gap-3">
 
             <div class="w-14 h-14 rounded-full flex items-center justify-center">
               <img src="/icons/package.svg" class="w-10" alt="" />
@@ -92,7 +29,7 @@
             class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
             <div class="flex gap-3 items-center relative cursor-pointer">
-              <router-link to="/filing" class="flex items-center gap-2">
+              <router-link to="/advisor/filing" class="flex items-center gap-2">
               <div
                 class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center"
               >
@@ -112,7 +49,7 @@
           class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
             <div class="flex gap-3 items-center relative cursor-pointer">
-              <router-link to="/FavoritesView" class="flex items-center gap-2">
+              <router-link to="/advisor/FavoritesView" class="flex items-center gap-2">
 
                 <div
                   class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center"
@@ -137,7 +74,7 @@
           class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
             <div class="flex gap-3 items-center relative cursor-pointer">
-              <router-link to="/ApplicantsView" class="flex items-center gap-2">
+              <router-link to="/advisor/ApplicantsView" class="flex items-center gap-2">
               <div
                 class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center"
               >
@@ -157,7 +94,7 @@
           class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
             <div class="flex gap-3 items-center relative cursor-pointer">
-              <router-link to="/CustomersView" class="flex items-center gap-2">
+              <router-link to="/advisor/CustomersView" class="flex items-center gap-2">
 
                 <div
                   class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center"
@@ -225,7 +162,7 @@
         class="w-full bg-gradient-to-b from-white to-gray-300 shadow-lg mt-8 h-24 rounded-lg flex items-center py-2 px-4"
       >
         <div class="flex gap-3 items-center">
-          <a href="/SupportView" class="flex gap-3 items-center">
+          <a href="/advisor/SupportView" class="flex gap-3 items-center">
           <div class="w-14 h-14 rounded-full flex items-center justify-center">
             <img src="/img/comment.svg" class="w-10" alt="" />
           </div>
@@ -258,38 +195,38 @@ export default {
         {
           label: "ثبت ملک",
           imageSrc: "/img/home.png",
-          link : "/FilesPageView",
+          link : "/advisor/FilesPageView",
         },
         { label: "تیکت ها",
          imageSrc: "/img/data.png",
-         link : "/DueDatesView",
+         link : "/advisor/DueDatesView",
          },
         {
           label: "مشاورین من",
           imageSrc: "/img/consultant.png",
-          link : "/AdvisersView",
+          link : "/advisor/AdvisersView",
         },
         {
           label: "دعوت همکاران",
           imageSrc: "/img/coll.png",
-          link : "/InviteView",
+          link : "/advisor/InviteView",
         },
         {
           label: "خرید اشتراک",
           imageSrc: "/img/sub.png",
-          link : "/BuySubscriptionView",
+          link : "/advisor/BuySubscriptionView",
         },
         { label: "آموزش پنل",
          imageSrc: "/img/video.png",
-        link: "/VideoView"
+        link: "/advisor/VideoView"
        },
        { label: " عضویت مشاور",
          imageSrc: "/img/ship.png",
-        link: "/consultant"
+        link: "/advisor/consultant"
        },
        { label: "مشارکت",
          imageSrc: "/img/part.png",
-        link: "/ParticipationView"
+        link: "/advisor/ParticipationView"
        },
       ],
       isSubMenuOpen: false,

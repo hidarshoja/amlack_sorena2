@@ -7,7 +7,7 @@
         <span class="text-[#333] font-semibold">⟵</span>
       </h3>
       <div v-for="(item, index) in tutorials" :key="index" class="mt-5">
-      <router-link :to="`/VideoView/${item.id}`">
+      <router-link :to="`/advisor/VideoView/${item.id}`">
         <div class="flex justify-center gap-3 bg-green-600 rounded-xl px-12 py-4 items-center shadow-lg">
           <img src="/img/playVideo.svg" alt="">
           <span class="text-white">{{ item.title }}</span>

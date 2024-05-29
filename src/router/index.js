@@ -5,133 +5,133 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/advisor',
       component: () => import('../layouts/Rootlayot.vue'),
       children:[
         {
-          path: '/',
+          path: 'home',
           name: 'home',
           component: HomeView
         },
         {
-          path: '/about',
+          path: 'about',
           name: 'about',
           component: () => import('../views/AboutView.vue')
         },
         {
-          path: '/detailsFiles',
+          path: 'detailsFiles',
           name: 'detailsFiles',
           component: () => import('../views/DetailsFilesView.vue')
         },
         {
-          path: '/chat/:title',
+          path: 'chat/:title',
           name: 'chat',
           component: () => import('../views/ChatView.vue'),
           props: true
         },
         {
-          path: '/detalis',
+          path: 'detalis',
           name: 'detalis',
           component: () => import('../views/DetailsView.vue')
         },
        
         {
-          path: '/notification',
+          path: 'notification',
           name: 'notification',
           component: () => import('../views/NotificationView.vue')
         },
         {
-          path: '/profile',
+          path: 'profile',
           name: 'profile',
           component: () => import('../views/ProfileView.vue')
         },
         {
-          path: '/password',
+          path: 'password',
           name: 'password',
           component: () => import('../views/UserPassword.vue')
         },
         {
-          path: '/transactionsView',
+          path: 'transactionsView',
           name: 'transactionsView',
           component: () => import('../views/transactionsView.vue')
         },
         {
-          path: '/consultant',
+          path: 'consultant',
           name: 'ConsultantView',
           component: () => import('../views/ConsultantView.vue')
         },
         {
-          path: '/ApplicantsView',
+          path: 'ApplicantsView',
           name: 'ApplicantsView',
           component: () => import('../views/ApplicantsView.vue')
         },
         {
-          path: '/filing',
+          path: 'filing',
           name: 'filing',
           component: () => import('../views/FilingView.vue')
         },
         {
-          path: '/BuySubscriptionView',
+          path: 'BuySubscriptionView',
           name: 'BuySubscriptionView',
           component: () => import('../views/BuySubscriptionView.vue')
         },
         {
-          path: '/SupportView',
+          path: 'SupportView',
           name: 'SupportView',
           component: () => import('../views/SupportView.vue')
         },
         {
-          path: '/AdvisersView',
+          path: 'AdvisersView',
           name: 'AdvisersView',
           component: () => import('../views/AdvisersView.vue')
         },
         {
-          path: '/AccountView',
+          path: 'AccountView',
           name: 'AccountView',
           component: () => import('../views/AccountView.vue')
         },
         {
-          path: '/InviteView',
+          path: 'InviteView',
           name: 'InviteView',
           component: () => import('../views/InviteView.vue')
         },
         {
-          path: '/VideoView',
+          path: 'VideoView',
           name: 'VideoView',
           component: () => import('../views/VideoView.vue')
         },
         {
-          path: '/VideoView/:id',
+          path: 'VideoView/:id',
           name: 'VideoView2',
           component: () => import('../views/VideoFileView.vue')
         },
         {
-          path: '/FilesPageView',
+          path: 'FilesPageView',
           name: 'FilesPageView',
           component: () => import('../views/FilesPageView.vue')
         },
         {
-          path: '/DueDatesView',
+          path: 'DueDatesView',
           name: 'DueDatesView',
           component: () => import('../views/DueDatesView.vue')
         },
         {
-          path: '/FavoritesView',
+          path: 'FavoritesView',
           name: 'FavoritesView',
           component: () => import('../views/FavoritesView.vue')
         },
         {
-          path: '/CustomersView',
+          path: 'CustomersView',
           name: 'CustomersView',
           component: () => import('../views/CustomersView.vue')
         },
         {
-          path: '/ParticipationView',
+          path: 'ParticipationView',
           name: 'ParticipationView',
           component: () => import('../views/ParticipationView.vue')
         },
         {
-          path: '/ParticipationFormView',
+          path: 'ParticipationFormView',
           name: 'ParticipationFormView',
           component: () => import('../views/ParticipationFormView.vue')
         },
@@ -154,11 +154,104 @@ const router = createRouter({
       
     ]
     },
-   
-    
-   
+    {
+      path: '/',
+      component: () => import('../layouts/Authlayot.vue'),
+      children: [
+        {
+        path:'loginExpert',
+        component: () => import('../views/LoginExpertView.vue')
+      }
+      ,{
+        path:'registerExpert',
+        component: () => import('../views/RegisterExpertView.vue')
+      },
+      {
+        path:'',
+        component: () => import('../views/MainPageView.vue')
+      },
+      {
+        path: 'error',
+        component: () => import('../views/ErorrView.vue')
+      },
+      {
+        path:'LoginMonitor',
+        component: () => import('../views/LoginMonitorView.vue')
+      },
+      {
+        path:'registerMonitor',
+        component: () => import('../views/RegisterMonitorView.vue')
+      },
+      {
+        path:'PropertyRegistration',
+        component: () => import('../views/PropertyRegistrationView.vue')
+      }
+      
+    ]
+    },
+    {
+      path: '/expertPage',
+      component: () => import('../layouts/RootlayotExpert.vue'),
+      children:[
+        {
+          path: 'subscription',
+          component: () => import('../views/SubscriptionView.vue')
+        },
+        {
+          path: 'auctionView',
+          component: () => import('../views/AuctionView.vue')
+        },
+        {
+          path: 'profileExpert',
+          component: () => import('../views/ProfileExpertView.vue')
+        },
+
+        {
+          path: 'DetailsFilesExpert',
+     
+          component: () => import('../views/DetailsFilesExpertView.vue')
+        },
+        {
+          path: 'ChatExpert',
+     
+          component: () => import('../views/ChatExpertView.vue')
+        },
+      
+       
+      ]
+    },
+    {
+      path: '/expertMonitor',
+      component: () => import('../layouts/RootlayotMonitor.vue'),
+      children: [
+      
+      {
+        path:'PropertyRegistration',
+        component: () => import('../views/PropertyRegistrationView.vue')
+      },
+      {
+        path:'ProfileMonitor',
+        component: () => import('../views/ProfileMonitorView.vue')
+      },
+      {
+        path:'PropertyMonitor',
+        component: () => import('../views/PropertyMonitor.vue')
+      },
+      {
+        path:'DetailsFilesMonitor',
+        component: () => import('../views/DetailsFilesMonitorView.vue')
+      },
+      {
+        path:'NotificationMonitor',
+        component: () => import('../views/NotificationMonitorView.vue')
+      },
+    ]
+    },
    
   ]
 })
 
 export default router;
+
+
+

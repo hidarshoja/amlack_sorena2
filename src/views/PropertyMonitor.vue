@@ -4,18 +4,9 @@
   >
     <div class="flex items-center justify-between">
       <h3 class="flex gap-1 items-center">
-        <span class="text-[#333] font-semibold"> فایلینگ</span>
+        <span class="text-[#333] font-semibold"> ملک های ثبت شده </span>
         <span class="text-[#333] font-semibold">⟵</span>
       </h3>
-      <div>
-        <select
-          id="transactionType"
-          class="py-0.5 w-32 px-1 rounded-md border border-1 outline-none border-[#a3a3a3] flex items-center justify-between"
-        >
-          <option value="buy">خرید</option>
-          <option value="sell">فروش</option>
-        </select>
-      </div>
     </div>
     <div class="w-full relative mt-3">
       <input
@@ -30,15 +21,6 @@
       />
     </div>
     <div class="flex mt-5 items-center justify-between">
-      <div>
-        <span
-          @click="openModal = true"
-          class="bg-green-300 text-sm py-1.5 px-4 rounded-lg border-green-700 border-1 border cursor-pointer text-gray-800 flex gap-2 items-center"
-        >
-          <span><img src="/img/filter.svg" class="w-4" alt="" /></span
-          ><span>فیلترها</span>
-        </span>
-      </div>
       <div class="flex gap-2 text-sm">
         <span>نمایش</span>
         <span>20</span>
@@ -53,12 +35,14 @@
         :key="item"
         class="mt-10"
       >
-        <a href="/advisor/detailsFiles">
+        <router-link to="/expertMonitor/DetailsFilesMonitor">
+     
+          <!-- طرح 6 -->
           <div
-            class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden"
+            class="max-w-sm mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200"
           >
             <div
-              class="bg-gradient-to-r from-purple-500 to-indigo-500 h-48 relative"
+              class="bg-gradient-to-r from-blue-500 to-purple-500 h-48 relative"
             >
               <img
                 :src="item.src"
@@ -66,28 +50,36 @@
                 alt=""
               />
               <span
-                class="absolute top-2 left-2 text-white bg-gradient-to-r from-green-400 to-blue-400 rounded-md px-2 py-1"
+                class="absolute top-2 left-2 text-sm bg-white text-gray-800 rounded-md px-2 py-1"
                 >{{ item.title }}</span
               >
             </div>
             <div class="p-6">
-              <h2 class="text-xl font-bold text-gray-800">{{ item.type }}</h2>
+              <h2 class="text-lg font-bold text-gray-800">{{ item.type }}</h2>
               <p class="text-gray-600 mt-2">{{ item.dic }}</p>
-              <div class="flex items-center mt-4 text-gray-700">
+              <div class="flex items-center mt-4">
                 <img
                   src="/img/location.svg"
                   alt="location"
-                  class="w-5 h-5 mr-2"
+                  class="w-5 h-5 text-gray-500 mr-2"
                 />
-                <span>{{ item.city }}</span>
+                <span class="text-gray-800">{{ item.city }}</span>
               </div>
-              <div class="flex items-center mt-2 text-gray-700">
-                <img src="/img/number.svg" alt="number" class="w-5 h-5 mr-2" />
-                <span>{{ item.code }}</span>
+              <div class="flex items-center mt-2">
+                <img
+                  src="/img/number.svg"
+                  alt="number"
+                  class="w-4 h-4 text-gray-500 mr-2"
+                />
+                <span class="text-gray-800">{{ item.code }}</span>
               </div>
-              <div class="flex items-center mt-2 text-gray-700">
-                <img src="/img/date2.svg" alt="date" class="w-5 h-5 mr-2" />
-                <span>{{ item.time }} ساعت پیش</span>
+              <div class="flex items-center mt-2">
+                <img
+                  src="/img/date2.svg"
+                  alt="date"
+                  class="w-5 h-5 text-gray-500 mr-2"
+                />
+                <span class="text-gray-800">{{ item.time }} ساعت پیش</span>
               </div>
             </div>
             <div class="bg-gray-100 px-6 py-4">
@@ -127,7 +119,7 @@
               </div>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
       <div
         v-else-if="products.length == 0"
@@ -190,175 +182,6 @@
         </a>
       </div>
     </nav>
-    <div
-      v-if="openModal"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-    >
-      <div class="bg-white px-8 py-2 rounded-lg max-w-2xl">
-        <div class="flex items-center justify-between py-3">
-          <div class="text-gray-600 text-sm">فیلترها</div>
-          <button
-            @click="openModal = false"
-            class="bg-red-500 hover:bg-red-600 text-white w-6 h-6 rounded-full"
-          >
-            x
-          </button>
-        </div>
-        <div class="text-gray-600 text-sm py-2 mt-5">نوع واگذاری</div>
-        <div class="flex gap-3 flex-wrap">
-          <button
-            v-for="button in buttonsTransfer"
-            :key="button.id"
-            @click="handleClick(button.id)"
-            class="w-24 border border-1 border-green-400 rounded-lg py-1 text-sm"
-            :style="{
-              backgroundColor: button.id === selectedButtonId ? 'green' : '',
-              color: button.id === selectedButtonId ? 'white' : '',
-            }"
-          >
-            {{ button.name }}
-          </button>
-        </div>
-        <div class="text-gray-600 text-sm py-2 mt-5">نوع ملک</div>
-        <div class="flex gap-3 flex-wrap">
-          <button
-            v-for="button in PropertyType"
-            :key="button.id"
-            @click="handleClick2(button.id)"
-            class="w-24 border border-1 border-green-400 rounded-lg py-1 text-sm"
-            :style="{
-              backgroundColor: button.id === selectedButtonId2 ? 'green' : '',
-              color: button.id === selectedButtonId2 ? 'white' : '',
-            }"
-          >
-            {{ button.name }}
-          </button>
-        </div>
-        <div class="text-gray-600 text-sm py-2 mt-5">تعداد اتاق</div>
-        <div class="flex gap-3 flex-wrap">
-          <button
-            v-for="button in numberRooms"
-            :key="button.id"
-            @click="handleClick3(button.id)"
-            class="w-24 border border-1 border-green-400 rounded-lg py-1 text-sm"
-            :style="{
-              backgroundColor: button.id === selectedButtonId3 ? 'green' : '',
-              color: button.id === selectedButtonId3 ? 'white' : '',
-            }"
-          >
-            {{ button.name }}
-          </button>
-        </div>
-
-        <div class="text-gray-600 text-sm py-2 mt-5">متراژ</div>
-        <div class="flex gap-3 flex-wrap">
-          <div class="relative">
-            <label
-              for="min-meter"
-              class="absolute -top-2 right-2 inline-block bg-white px-1 text-xs font-medium text-gray-900"
-              >حداقل متراژ</label
-            >
-            <input
-              type="text"
-              name="min-meter"
-              id="min-meter"
-              class="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              placeholder=""
-              dir="ltr"
-            />
-          </div>
-          <div class="relative">
-            <label
-              for="max-meter"
-              class="absolute -top-2 right-2 inline-block bg-white px-1 text-xs font-medium text-gray-900"
-              >حداکثر متراژ</label
-            >
-            <input
-              type="text"
-              name="max-meter"
-              id="max-meter"
-              class="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              placeholder=""
-              dir="ltr"
-            />
-          </div>
-        </div>
-        <div class="flex items-center gap-3 mt-5">
-          <div class="text-gray-600 text-sm py-2">قیمت توافقی</div>
-          <Switch
-            v-model="enabled"
-            class="group relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-          >
-            <span class="sr-only">Use setting</span>
-            <span
-              aria-hidden="true"
-              class="pointer-events-none absolute h-full w-full rounded-md bg-white"
-            />
-            <span
-              aria-hidden="true"
-              :class="[
-                enabled ? 'bg-indigo-600' : 'bg-gray-200',
-                'pointer-events-none absolute mx-auto h-4 w-9 rounded-full transition-colors duration-200 ease-in-out',
-              ]"
-            />
-            <span
-              aria-hidden="true"
-              :class="[
-                enabled ? 'translate-x-5' : 'translate-x-0',
-                'pointer-events-none absolute left-0 inline-block h-5 w-5 transform rounded-full border border-gray-200 bg-white shadow ring-0 transition-transform duration-200 ease-in-out',
-              ]"
-            />
-          </Switch>
-        </div>
-        <div v-if="!enabled">
-          <div class="text-gray-600 text-sm py-2 mt-5">بازه قیمت</div>
-          <div class="flex gap-3 flex-wrap">
-            <div class="relative">
-              <label
-                for="min-meter"
-                class="absolute -top-2 right-2 inline-block bg-white px-1 text-xs font-medium text-gray-900"
-                >حداقل قیمت</label
-              >
-              <input
-                type="text"
-                name="min-meter"
-                id="min-meter"
-                class="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder=""
-                dir="ltr"
-              />
-            </div>
-            <div class="relative">
-              <label
-                for="max-meter"
-                class="absolute -top-2 right-2 inline-block bg-white px-1 text-xs font-medium text-gray-900"
-                >حداکثر قیمت</label
-              >
-              <input
-                type="text"
-                name="max-meter"
-                id="max-meter"
-                class="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder=""
-                dir="ltr"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="flex items-center justify-between py-5">
-          <button
-            class="bg-red-500 hover:bg-red-600 text-white py-1.5 px-4 rounded-lg"
-          >
-            پاکسازی
-          </button>
-          <button
-            class="bg-green-500 hover:bg-green-600 text-white py-1.5 px-4 rounded-lg"
-          >
-            اعمال فیلتر
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -380,7 +203,6 @@ export default {
   },
   data() {
     return {
-      openModal: false,
       selectedButtonId: null,
       selectedButtonId2: null,
       selectedButtonId3: null,

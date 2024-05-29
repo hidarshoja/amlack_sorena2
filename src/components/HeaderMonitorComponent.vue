@@ -18,7 +18,7 @@
               class="absolute bg-red-400 text-[12px] text-white w-5 h-5 rounded-full flex items-center justify-center top-[-5px] left-6"
               >3</span
             >
-            <a href="/advisor/notification">
+            <a href="/expertMonitor/NotificationMonitor">
               <img
                 src="/icons/alert.png"
                 class="w-[30px] cursor-pointer"
@@ -44,17 +44,12 @@
             >
               <ul>
                 <li>
-                  <a href="/advisor/profile" class="profileBtn">حساب کاربری</a>
+                  <a href="/expertMonitor/ProfileMonitor" class="profileBtn">حساب کاربری</a>
                 </li>
                 <li>
-                  <a class="profileBtn" href="/advisor/password">تغییر رمز عبور</a>
+                  <a class="profileBtn" href="/expertMonitor/ProfileMonitor">تغییر رمز عبور</a>
                 </li>
-                <li>
-                  <a class="profileBtn" href="/advisor/transactionsView">سوابق پرداختی</a>
-                </li>
-                <li>
-                  <a class="profileBtn" href="/advisor/BuySubscriptionView">خرید اشتراک</a>
-                </li>
+               
                 <li>
                   <a class="profileBtn">خروج</a>
                 </li>

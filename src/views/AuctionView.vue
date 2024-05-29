@@ -1,0 +1,322 @@
+<template>
+    <div class="w-[90%] min-auto mx-auto bg-gray-300 shadow-lg py-10 px-3 lg:px-28 rounded-xl">
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h3 class="text-2xl py-3 font-semibold text-[#3b3b3b]">مزایده</h3>
+          <div class="w-full relative mt-3">
+      <input
+        type="text"
+        class="w-full py-2 px-3 rounded-lg text-sm border border-1 border-gray-400"
+        placeholder="جستجو براساس نام  ، نام محدوده "
+      />
+      <img
+        src="/icons/search.svg"
+        class="w-6 absolute left-2 cursor-pointer top-2"
+        alt=""
+      />
+    </div>
+    <div class="flex mt-5 items-center justify-between">
+     
+      <div class="flex gap-2 text-sm">
+        <span>نمایش</span>
+        <span>20</span>
+        <span>مورد از</span>
+        <span>33620</span>
+      </div>
+    </div>
+    <div class="flex items-center mt-5 gap-3 flex-wrap justify-center">
+      <div
+        v-if="products.length > 0"
+        v-for="item in products"
+        :key="item"
+        class="mt-10"
+      >
+        <a href="/expertPage/DetailsFilesExpert">
+          <div
+            class="shadow-lg rounded-xl bg-white font-yekan overflow-hidden border-t border-t-[#eaeaea]"
+          >
+            <div class="p-6 bg-gray-100">
+              <div class="w-full bg-gray-200 relative  rounded-t-lg overflow-hidden">
+                <span class="absolute text-green-100 right-1 top-1 text-sm bg-green-700 rounded-md px-1">{{ item.title }}</span>
+               <img :src="item.src" width="280px" height="80px" alt="">
+              </div>
+              <div
+                class="text-white flex justify-around items-center py-2 pb-2 text-sm px-2 border-b border-dashed border-gray-300 bg-gray-700"
+              >
+                <div class="text-primary-10">
+                  <span class="font-bold text-pink"> {{ item.type }} </span>
+                </div>
+                <div>{{ item.dic }}</div>
+                <div></div>
+              </div>
+              <div
+                class="bg-gray-200 inline-flex w-full justify-between items-center pb-2 border-b border-dashed border-gray-300 py-2 px-1"
+              >
+                <div class="text-sm">{{ item.meter }}</div>
+                <div  class="ml-1 min-w-[20px] flex gap-2">
+                  <img src="/img/location.svg" alt="location" class="w-5 h-5" />
+                  <div class="min-w-0">
+                    <p class="text-[#333] truncate font-semibold text-sm">
+                      {{ item.city }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between w-full items-center py-2 px-1 bg-gray-600 rounded-b-lg"
+              >
+                <div class="flex items-center">
+                  <div class="m-1">
+                    <img
+                      src="/img/number.svg"
+                      alt="number"
+                      class="w-4 h-4 bg-white rounded-md"
+                    />
+                  </div>
+                  <div class="font-yekanNum text-sm text-white">
+                    {{ item.code }}
+                  </div>
+                </div>
+                <div class="flex items-center ng-star-inserted">
+                  <div class="m-1">
+                    <img src="/img/date2.svg" alt="date" class="w-5 h-5 bg-white rounded-lg" />
+                  </div>
+                  <div class="font-yekanNum text-sm text-white">
+                    {{ item.time }} ساعت پیش
+                  </div>
+                </div>
+                <div class="flex justify-between items-center"></div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center pink px-0 py-2 text-white bg-[#f800ce] ng-star-inserted"
+              v-if="item.type === 'رهن و اجاره'"
+            >
+              <div class="flex justify-start items-center mx-2">
+                <div class="mx-1 font-yekan text-sm ng-star-inserted">رهن:</div>
+                <div class="font-yekan text-sm ng-star-inserted">
+                  {{ item.price }} میلیون تومان
+                </div>
+              </div>
+              <div class="flex justify-start items-center mx-2">
+                <div class="mx-1 font-yekan text-sm ng-star-inserted">
+                  اجاره:
+                </div>
+                <div class="font-yekan text-sm ng-star-inserted">
+                  {{ item.price2 }} میلیون تومان
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center pink px-0 py-2 text-white bg-[#46e940] ng-star-inserted"
+              v-if="item.type === 'خرید و فروش'"
+            >
+              <div class="flex justify-start items-center mx-2">
+                <div class="mx-1 font-yekan text-sm ng-star-inserted">
+                  قیمت متر:
+                </div>
+                <div class="font-yekan text-sm ng-star-inserted">
+                  {{ item.price }} تومان
+                </div>
+              </div>
+              <div class="flex justify-start items-center mx-2">
+                <div class="mx-1 font-yekan text-sm ng-star-inserted">
+                  قیمت کل:
+                </div>
+                <div class="font-yekan text-sm ng-star-inserted">
+                  {{ item.price2 }} میلیون تومان
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        v-else-if="products.length == 0"
+        class="flex flex-col items-center justify-center gap-5"
+      >
+        <img src="/img/file.svg" class="w-72" alt="" />
+        <span class="text-[#333] font-semibold">هیچ فایلی ثبت نشده است !</span>
+      </div>
+    </div>
+    <nav
+      class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 mt-10"
+    >
+      <div class="-mt-px flex w-0 flex-1">
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+        >
+          قبلی
+        </a>
+      </div>
+      <div class="hidden md:-mt-px md:flex">
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >1</a
+        >
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-indigo-500 px-4 pt-4 text-sm font-medium text-indigo-600"
+          aria-current="page"
+          >2</a
+        >
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >3</a
+        >
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >4</a
+        >
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >5</a
+        >
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          >6</a
+        >
+      </div>
+      <div class="-mt-px flex w-0 flex-1 justify-end">
+        <a
+          href="#"
+          class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+        >
+          بعدی
+        </a>
+      </div>
+    </nav>
+  
+       
+        </div>
+      </div>
+   
+    </div>
+  </template>
+  
+  <script>
+import { ref } from "vue";
+import { Switch } from "@headlessui/vue";
+
+const enabled = ref(false);
+
+export default {
+  components: {
+    Switch,
+  },
+  setup() {
+    const enabled = ref(false);
+
+    return {
+      enabled,
+    };
+  },
+  data() {
+    return {
+      
+      selectedButtonId: null,
+      selectedButtonId2: null,
+      selectedButtonId3: null,
+    
+      products: [
+        {
+          id: 1,
+          title: "اجاره سوله",
+          type: "رهن و اجاره",
+          dic: "صنعتی ، کشاورزی و تجاری",
+          meter: "متراژ 170 متری",
+          city: "بجنورد ",
+          code: "23456",
+          time: "5",
+          price: "100",
+          price2: "1",
+          src: "/img/07.jpg",
+        },
+        {
+          id: 2,
+          title: "فروش واحد مسکونی",
+          type: "خرید و فروش",
+          dic: "فروش واحد مسکونی",
+          meter: "متراژ 110 متری",
+          city: " بجنورد",
+          code: "34567",
+          time: "7",
+          price: "170",
+          price2: "2,300",
+          src: "/img/08.jpg",
+        },
+        {
+          id: 3,
+          title: "اجاره مسکونی",
+          type: "رهن و اجاره",
+          dic: "رهن واحد مسکونی",
+          meter: "متراژ 115 متری",
+          city: "بجنورد",
+          code: "987543",
+          time: "11",
+          price: "1",
+          price2: "200",
+          src: "/img/09.jpg",
+        },
+        {
+          id: 4,
+          title: "اجاره سوله",
+          type: "رهن و اجاره",
+          dic: "صنعتی ، کشاورزی و تجاری",
+          meter: "متراژ 170 متری",
+          city: "بجنورد ",
+          code: "23456",
+          time: "5",
+          price: "100",
+          price2: "1",
+          src: "/img/10.jpg",
+        },
+        {
+          id: 6,
+          title: "اجاره مسکونی",
+          type: "رهن و اجاره",
+          dic: "رهن واحد مسکونی",
+          meter: "متراژ 115 متری",
+          city: "بجنورد",
+          code: "987543",
+          time: "11",
+          price: "1",
+          price2: "200",
+          src: "/img/11.jpg",
+        },
+        {
+          id: 5,
+          title: "فروش واحد مسکونی",
+          type: "خرید و فروش",
+          dic: "فروش واحد مسکونی",
+          meter: "متراژ 110 متری",
+          city: " بجنورد",
+          code: "34567",
+          time: "7",
+          price: "170",
+          price2: "2,300",
+          src: "/img/12.jpg",
+        },
+      ],
+    };
+  },
+  methods: {
+    handleClick(id) {
+      this.selectedButtonId = id;
+    },
+    handleClick2(id) {
+      this.selectedButtonId2 = id;
+    },
+    handleClick3(id) {
+      this.selectedButtonId3 = id;
+    },
+  },
+};
+</script>
+  

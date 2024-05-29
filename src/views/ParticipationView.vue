@@ -8,7 +8,7 @@
       <span class="text-[#333] font-semibold">⟵</span>
     </h3>
     <div class="flex items-center justify-end  py-5">
-        <router-link to="/ParticipationFormView">
+        <router-link to="/advisor/ParticipationFormView">
 
             <button
               class="border text-[#ebebeb] bg-green-700 border-green-500 py-1.5 px-6 rounded-lg hover:bg-green-600 hover:text-white"
