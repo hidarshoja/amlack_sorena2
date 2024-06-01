@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-28 text-center fixed bottom-2 z-10">
+  <div class="w-full h-28 text-center fixed bottom-20 md:bottom-2 z-10">
     <div
       class="flex flex-col lg:flex-row items-center justify-center lg:justify-around relative w-[90%]  mx-auto bg-gray-100 shadow-lg py-2 px-3 rounded-xl"
     >
