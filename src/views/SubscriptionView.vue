@@ -56,6 +56,7 @@
           </table>
         </div>
       </div>
+      <div class="w-full h-32"></div>
     </div>
   </template>
   

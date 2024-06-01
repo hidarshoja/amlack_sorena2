@@ -182,6 +182,7 @@
         </a>
       </div>
     </nav>
+    <div class="w-full h-48"></div>
   </div>
 </template>
 <script>

@@ -50,7 +50,7 @@
       >
         <span class="text-base text-green-700">کدهای تخفیف من</span>
       </div>
-      <div class="px-3">
+      <div class="px-3 overflow-x-auto">
         <table class="min-w-full">
               <thead class="bg-green-950">
                 <tr>
@@ -75,6 +75,7 @@
             </table>
       </div>
     </div>
+    <div class="w-full h-60"></div>
   </div>
 </template>
 <script>

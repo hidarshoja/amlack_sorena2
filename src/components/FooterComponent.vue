@@ -26,24 +26,24 @@
       </router-link>
      
        
-       <router-link to="/advisor/ApplicantsView">
+       <router-link to="/advisor/VideoView">
          
             <div class="flex flex-col items-center gap-1 cursor-pointer">
               <span class="inline-block p-1 rounded-full">
                 <img src="/icons/users.png" class="w-7" alt="" />
               </span>
-              <span> متقاضیان </span>
+              <span> اموزش  </span>
             </div>
 
        </router-link>
       
-       <router-link to="/advisor/ApplicantsView">
+       <router-link to="/advisor/BuySubscriptionView">
          
          <div class="flex flex-col items-center gap-1 cursor-pointer">
            <span class="inline-block p-1 rounded-full">
              <img src="/icons/users.png" class="w-7" alt="" />
            </span>
-           <span> متقاضیان </span>
+           <span> اشتراک </span>
          </div>
 
     </router-link>
