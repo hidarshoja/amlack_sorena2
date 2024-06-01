@@ -26,12 +26,12 @@
                 <div>
                   <img :src="item.src" class="w-8 h-8 rounded-full" alt="" />
                 </div>
-                <div class="px-2">{{ item.description }}</div>
-              </div>
-              <div class="flex items-center gap-2">
-                <div class="text-sm text-green-500">{{ item.time }}</div>
-                <div class="px-1 text-sm text-green-500">{{ item.data }}</div>
-              </div>
+                <div class="px-2 text-[12px] lg:text-sm">{{ item.description }}</div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-2">
+              <div class=" text-[12px] lg:text-sm text-green-500">{{ item.time }}</div>
+              <div class="px-1  text-[12px] lg:text-sm text-green-500">{{ item.data }}</div>
+            </div>
             </div>
           </div>
           <div class="py-6 flex items-center flex-col md:flex-row gap-2 mt-10">

@@ -3,7 +3,7 @@
       <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <h3 class="text-2xl py-3 font-semibold text-[#3b3b3b]">خرید اشتراک</h3>
-          <div class="flex items-center">
+          <div class="flex flex-col lg:flex-row gap-3 items-center">
             <input type="text" placeholder="کدتخفیف" class="border border-gray-400 rounded-md py-1 px-3 outline-none">
             <button class="bg-indigo-500 px-2 py-1 mr-2 rounded-md border border-gray-600 hover:bg-indigo-200 hover:text-gray-600 text-white">اعمال کد</button>
           </div>

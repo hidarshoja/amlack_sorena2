@@ -86,13 +86,13 @@
                   >
                     <div class="flex flex-col items-center">
                       <span class="text-sm">رهن</span>
-                      <span class="font-semibold text-lg"
+                      <span class="font-semibold text-sm"
                         >{{ item.price }} میلیون تومان</span
                       >
                     </div>
                     <div class="flex flex-col items-center">
                       <span class="text-sm">اجاره</span>
-                      <span class="font-semibold text-lg"
+                      <span class="font-semibold text-sm"
                         >{{ item.price2 }} میلیون تومان</span
                       >
                     </div>
@@ -103,13 +103,13 @@
                   >
                     <div class="flex flex-col items-center">
                       <span class="text-sm">قیمت متر</span>
-                      <span class="font-semibold text-lg"
+                      <span class="font-semibold text-sm"
                         >{{ item.price }} تومان</span
                       >
                     </div>
                     <div class="flex flex-col items-center">
                       <span class="text-sm">قیمت کل</span>
-                      <span class="font-semibold text-lg"
+                      <span class="font-semibold text-sm"
                         >{{ item.price2 }} میلیون تومان</span
                       >
                     </div>
