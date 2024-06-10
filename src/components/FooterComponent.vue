@@ -21,7 +21,7 @@
             <span class="inline-block p-1 rounded-full">
               <img src="/icons/files.png" class="w-7" alt="" />
             </span>
-            <span> فایلینگ </span>
+            <span class="text-sm"> فایلینگ </span>
           </div>
       </router-link>
      
@@ -32,7 +32,7 @@
               <span class="inline-block p-1 rounded-full">
                 <img src="/icons/users.png" class="w-7" alt="" />
               </span>
-              <span> اموزش  </span>
+              <span class="text-sm"> اموزش  </span>
             </div>
 
        </router-link>
@@ -43,7 +43,7 @@
            <span class="inline-block p-1 rounded-full">
              <img src="/icons/users.png" class="w-7" alt="" />
            </span>
-           <span> اشتراک </span>
+           <span class="text-sm"> اشتراک </span>
          </div>
 
     </router-link>
@@ -55,7 +55,7 @@
           <span class="inline-block p-1 rounded-full">
             <img src="/icons/file.png" class="w-7" alt="" />
           </span>
-          <span> دفاتر فایل </span>
+          <span class="text-sm"> دفاتر فایل </span>
           </router-link>
         </div>
         <div class="flex flex-col items-center gap-1 cursor-pointer">
@@ -63,7 +63,7 @@
             <span class="inline-block p-1 rounded-full">
               <img src="/icons/user.png" class="w-7" alt="" />
             </span>
-            <span> مشتریان </span>
+            <span class="text-sm"> مشتریان </span>
           </router-link>
         </div>
        
@@ -72,7 +72,7 @@
             <span class="inline-block p-1 rounded-full">
               <img src="/icons/user.png" class="w-7" alt="" />
             </span>
-            <span> متخصصان </span>
+            <span class="text-sm"> متخصصان </span>
           </router-link>
         </div>
       </div>

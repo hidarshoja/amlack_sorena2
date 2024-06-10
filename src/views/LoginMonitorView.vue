@@ -1,6 +1,19 @@
 <template>
+   <div class="area">
+    <ul class="circles">
+      <li class="oneLi"></li>
+      <li class="twoLi"></li>
+      <li class="threeLi"></li>
+      <li class="fourLi"></li>
+      <li class="fiveLi"></li>
+      <li class="sexLi"></li>
+      <li class="sevenLi"></li>
+      <li class="eightLi"></li>
+      <li class="endLi"></li>
+      <li></li>
+    </ul>
   <div
-    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 relative z-50"
   >
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img
@@ -10,22 +23,20 @@
       />
       <div class="flex items-center mt-12 gap-3 justify-between">
         <router-link
-          className="flex cursor-pointer justify-center rounded-md  px-3   text-sm font-semibold leading-6 border-2 border-gray-700 text-white shadow-sm"
+         className="flex cursor-pointer justify-center rounded-md  px-3   text-sm font-semibold leading-6 border-2 border-gold1 bg-gold1 text-white shadow-sm"
           to="/"
         >
           <img src="/img/back.png" class="w-8 h-auto" alt="back" />
         </router-link>
 
-        <h2
-          className=" text-xl text-center font-bold leading-9 tracking-tight text-gray-900"
-        >
-          ورود به پنل پایشگر
-        </h2>
+        <h2 className=" text-xl text-center font-bold leading-9 tracking-tight text-gradient">
+                     ورود به پنل پایشگر
+                  </h2>
       </div>
     </div>
 
     <div
-      class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm px-4 py-10 rounded-lg shadow-lg shadow-gray-500"
+      class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm px-4 py-10 rounded-lg shadow-lg shadow-gray-500 bg-white"
     >
       <form class="space-y-6" action="#" method="POST">
         <div>
@@ -68,7 +79,7 @@
           <router-link to="/expertMonitor/PropertyRegistration">
             <button
               type="button"
-              class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+               class="flex w-full justify-center rounded-md custom-gradient-bg px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-gold6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               ورود
             </button>
@@ -78,9 +89,10 @@
       <span class="py-2 text-xs block">
         <span class="text-red-500"> هنوز ثبت نام نکرده اید ؟ </span>
         <span class="text-green-500">
-          <router-link to="/expert/registerMonitor"> ثبت نام </router-link>
+          <router-link to="/registerMonitor"> ثبت نام </router-link>
         </span>
       </span>
     </div>
   </div>
+   </div>
 </template>

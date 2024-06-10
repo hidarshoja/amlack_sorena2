@@ -70,7 +70,7 @@
       </div>
       <div class="mt-4">
         <div class="flex flex-col md:flex-row gap-3">
-          <!-- <div
+          <div
           class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
             <div class="flex gap-3 items-center relative cursor-pointer">
@@ -89,7 +89,7 @@
               </div>
               </router-link>
             </div>
-          </div> -->
+          </div>
           <div
           class="w-full md:w-1/2 h-16 bg-gradient-to-r from-blue-400 to-green-500 rounded-lg  py-2 px-4 hover:bg-gradient-to-r hover:from-green-900 hover:to-blue-400"
           >
@@ -109,6 +109,7 @@
                   <span class="text-white"> مشتریان من </span>
                 </div>
               </router-link>
+              
             </div>
           </div>
         </div>
